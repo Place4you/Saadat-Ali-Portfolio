@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "framer-motion": "^10.16.4",
+    "next": "13.5.4",
     "react": "^18",
+    "react-animated-numbers": "^0.16.0",
     "react-dom": "^18",
-    "next": "13.5.4"
+    "react-type-animation": "^3.2.0",
+    "resend": "^1.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^10",
