@@ -1,8 +1,22 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ProjectCard from './ProjectCard'
 import ProjectTag from './ProjectTag'
+import { InView, motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
+
 const ProjectSection = () => {
+
+
+
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Trigger the animation only once when it comes into view
+  });
+  const cardvarients ={
+      initial : { opacity:0.5, y:100},
+      animate : { opacity: 1, y:0},
+      transititon: { duration: 2}
+  }
 
   const [tag, setTag] = useState("ALL");
   const handleToChange = (Newtag) => 
@@ -73,41 +87,53 @@ const ProjectSection = () => {
 
   return (
     <>
-    <div className='my-3 p-3 h-auto w-auto'>
-        <h2 className=' mb-6 text-center text-4xl text-white font-extrabold'>My Projects</h2>
-        <div className='my-5 relative w-full  h-16 flex items-center justify-center gap-4'>
-            <ProjectTag
-            onClick={handleToChange}
-            name= "ALL"
-            isSelected={tag === "ALL"}
-            />
-            <ProjectTag
-            onClick={handleToChange}
-            name= "HTML/CSS"
-            isSelected={tag === "HTML/CSS"}
-            />
-            <ProjectTag
-            onClick={handleToChange}
-            name= "React"
-            isSelected={tag === "React"}
-            />
-        </div>
+    <section id='projects'>
+        <div  className='my-3 p-3 h-auto w-auto'>
+            <h2 className=' mb-6 text-center text-4xl text-white font-extrabold'>My Projects</h2>
+            <div className='my-5 relative w-full  h-16 flex items-center justify-center gap-4'>
+                <ProjectTag
+                onClick={handleToChange}
+                name= "ALL"
+                isSelected={tag === "ALL"}
+                />
+                <ProjectTag
+                onClick={handleToChange}
+                name= "HTML/CSS"
+                isSelected={tag === "HTML/CSS"}
+                />
+                <ProjectTag
+                onClick={handleToChange}
+                name= "React"
+                isSelected={tag === "React"}
+                />
+            </div>
 
-        <div className=' mb-5 grid md:grid-cols-3 text-white gap-5 lg:gap-10'>
-            {
-            filteredProject.map((project)=>
-            <ProjectCard 
-            title={project.title}
-            description={project.description}
-            tag={project.tag}
-            imageUrl={project.imageUrl}
-            github={project.github}
-            demoUrl={project.demoUrl}
-             />
-             )
-            }
+            <ul  className=' mb-5 grid md:grid-cols-3 text-white gap-5 lg:gap-10'>
+                {
+              
+                  filteredProject.map((project, index)=> 
+                  <motion.li ref={ref}
+                  key={index}
+                  variants={cardvarients}
+                  initial="initial"
+                  animate={ inView ?"animate" : "initial"}
+                  transition={{ duration:0.3, delay: index* 0.4 }}
+                  >
+                    <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    tag={project.tag}
+                    imageUrl={project.imageUrl}
+                    github={project.github}
+                    demoUrl={project.demoUrl}
+                    />
+                  </motion.li>
+                  )
+                
+                }
+            </ul>
         </div>
-    </div>
+      </section>
     </>
   )
 }

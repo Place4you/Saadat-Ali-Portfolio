@@ -9,7 +9,7 @@ const ProjectCard = ({title, description, imageUrl, github, demoUrl}) => {
     <> 
     <div className=' hover:shadow-white  hover:rounded-lg  hover:shadow-bottom'>
         <div className='group relative h-52 md:h-60  rounded-lg   '
-        style={{background : `url(${imageUrl})`, backgroundSize :"cover"}}
+        style={{background : `url(${imageUrl})`, backgroundSize :"contain"}}
         >
             
             <div className=' group overlay w-full h-full absolute top-0 left-0 hidden  bg-black bg-opacity-80   group-hover:flex  items-center justify-center gap-8'>
