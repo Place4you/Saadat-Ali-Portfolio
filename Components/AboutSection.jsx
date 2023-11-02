@@ -15,9 +15,9 @@ const AboutSection = () => {
       });
       
     const cardVariants ={
-        initial : { opacity:0.5, x:100},
+        initial : { opacity:0, x:100},
         animate : { opacity: 1, x:0},
-        transititon: { duration: 2}
+        transititon: { duration: 2000}
     }
 
     const handleTabChange = (id) => {
@@ -134,7 +134,7 @@ const AboutSection = () => {
         
             
 
-            <div className=' grid md:grid-cols-2 md:grid-flow-col gap-8 py-8 px-4 xl:gap-16 sm:gap-16 text-white' >       
+            <div className=' grid md:grid-cols-2 md:grid-flow-col gap-8 py-8 px-4 xl:gap-16 sm:gap-16 text-white bg-black bg-opacity-80' >       
 
                 <Image
                 className='order-2 lg:order-1 bg-orange-500 lg:h-full lg:w-full rounded-3xl place-self-center lg:place-self-start col-span-1 row-span-1 flex items-center justify-center '
@@ -144,7 +144,7 @@ const AboutSection = () => {
                         height={350}
                     />
                 
-                <div className='order-1 lg:order-2 '>
+                <div className='order-1 lg:order-2  '>
                     <h1 className='text-4xl lg:text-6xl font-extrabold pb-3  text-left sm:text-center'>👋 About me</h1>
                     <p className='text-lg pb-2 text-justify'> Hello, I'm Saadat, a <i>Frontend developer</i> with a passion for crafting stunning websites. I specialize in HTML, CSS, JavaScript, and React to create visually appealing and seamlessly functioning web designs. I'm experienced in Shopify customization, WordPress development, and turning Figma and PSD designs into reality. As a team player, I enjoy collaborating on projects that merge design and technology. My goal is to create web experiences that truly stand out. I'm always excited to connect with fellow creators and collaborators, so let's make web magic happen together!</p>      
 

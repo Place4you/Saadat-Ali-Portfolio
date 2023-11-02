@@ -13,7 +13,7 @@ const ProjectSection = () => {
     triggerOnce: true, // Trigger the animation only once when it comes into view
   });
   const cardvarients ={
-      initial : { opacity:0.5, y:100},
+      initial : { opacity:0, y:100},
       animate : { opacity: 1, y:0},
       transititon: { duration: 2}
   }
@@ -87,26 +87,27 @@ const ProjectSection = () => {
 
   return (
     <>
-    <section id='projects'>
-        <div  className='my-3 p-3 h-auto w-auto'>
+    <section id='projects' className='my-5 bg-black backdrop-blur-lg p-4 rounded-lg'>
+        <div  className='my-3 p-3 h-auto w-auto '>
             <h2 className=' mb-6 text-center text-4xl text-white font-extrabold'>My Projects</h2>
-            <div className='my-5 relative w-full  h-16 flex items-center justify-center gap-4'>
+            <div className="my-5 relative w-full flex flex-wrap sm:flex-nowrap items-center justify-center gap-4">
                 <ProjectTag
-                onClick={handleToChange}
-                name= "ALL"
-                isSelected={tag === "ALL"}
+                  onClick={handleToChange}
+                  name="ALL"
+                  isSelected={tag === "ALL"}
                 />
                 <ProjectTag
-                onClick={handleToChange}
-                name= "HTML/CSS"
-                isSelected={tag === "HTML/CSS"}
+                  onClick={handleToChange}
+                  name="HTML/CSS"
+                  isSelected={tag === "HTML/CSS"}
                 />
                 <ProjectTag
-                onClick={handleToChange}
-                name= "React"
-                isSelected={tag === "React"}
+                  onClick={handleToChange}
+                  name="React"
+                  isSelected={tag === "React"}
                 />
-            </div>
+              </div>
+
 
             <ul  className=' mb-5 grid md:grid-cols-3 text-white gap-5 lg:gap-10'>
                 {
@@ -117,7 +118,7 @@ const ProjectSection = () => {
                   variants={cardvarients}
                   initial="initial"
                   animate={ inView ?"animate" : "initial"}
-                  transition={{ duration:0.3, delay: index* 0.4 }}
+                  transition={{ duration:0.3, delay: index* 0.2 }}
                   >
                     <ProjectCard
                     title={project.title}

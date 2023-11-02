@@ -77,7 +77,7 @@ function TechStack() {
     </div>
 
     {/* Second Container - Elements (Icons and Text) */}
-    <div className="w-full text-center">
+    <div className="w-full text-center ">
       <div className="flex flex-wrap justify-evenly items-center">
         {techStack.map((tech) => (
           <div key={tech.name} className="flex flex-col items-center justify-between mx-4 my-4">

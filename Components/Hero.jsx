@@ -1,13 +1,25 @@
 "use client"
 import Image from 'next/image'
+import Link from 'next/link';
+import Particles from 'react-particles';
+import particlesConfig from './config/particles-config';
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 
 
 const Hero = () => {
+
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '\SAADAT ALI CV.pdf'; // Replace with the actual path to your CV file
+    link.download = 'SAADAT ALI CV.pdf'; // Change the filename if needed
+    link.click();
+  };
+
   return (
-    <section className='mb-3'>
+    <>
+    <section className='mb-3' id='home'>
         <motion.div
           initial={{ delay:0, opacity: 0 , x: -100}}
           animate={{  opacity: 1,  x: 0  }}
@@ -41,14 +53,19 @@ const Hero = () => {
            <p className='text-base text-[#AEB7BE]'> I am MERN stack Developer with Experience in Both Frontend & Backend, Currently working as Freelancer on Fiverr and Upwork</p>
 
            <div className="  p-4 space-y-4 lg:space-y-0 md:flex-col md:items-center md:justify-center">
-              <button
-                className=" w-full  lg:w-fit px-6 py-3 font-bold hover:font-bold
-                          bg-gradient-to-br from-orange-400 to-yellow-400 text-black hover:text-white rounded-lg hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500"
+              <button>
+              <Link href="https://www.upwork.com/freelancers/~01b81678ded0dd054a/" passHref 
+                target="_blank"
+                className="w-full lg:w-fit px-6 py-3 font-bold hover:font-bold
+                           bg-gradient-to-br from-orange-400 to-yellow-400 text-black hover:text-white rounded-lg hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500"
               >
                 Hire me
+              
+            </Link> 
               </button>
 
               <button
+               onClick={downloadCV}
                 className="w-full lg:ml-4 lg:w-fit px-6 py-3 font-bold hover:font-bold
                           bg-slate-800 text-white hover:text-white rounded-lg  hover:bg-slate-900"
               >
@@ -80,6 +97,8 @@ const Hero = () => {
 
 
     </section>
+
+    </>
   )
 }
 
