@@ -9,14 +9,14 @@ const ProjectCard = ({title, description, imageUrl, github, demoUrl}) => {
     <>
       <div className=' '>
   <div className='group relative h-52 md:h-60 bt-3  '
-    style={{background : `url(${imageUrl})`, backgroundSize :"contain",       borderTopLeftRadius: "10px", borderTopRightRadius: "10px"
+    style={{background : `url(${imageUrl})`, backgroundSize :"cover", backgroundPosition:"center",  backgroundRepeat:"no-repeat",  borderTopLeftRadius: "10px", borderTopRightRadius: "10px"
   }}
   >
     <div className=' group overlay w-full h-full absolute top-0 left-0 hidden  bg-black bg-opacity-80   group-hover:flex  items-center justify-center gap-8'>
-      <Link href={demoUrl}>
+      <Link href={demoUrl} target='_blank'>
         <EyeIcon className=' border-white rounded-full border-2 p-2 text-gray-400 hover:text-white h-14 w-14' />
       </Link>
-      <Link href={github}> 
+      <Link href={github} target='_blank'> 
         <CodeBracketIcon className=' border-white rounded-full border-2 p-2 text-gray-400 hover:text-white h-14 w-14 ' />
       </Link>
     </div>

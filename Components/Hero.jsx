@@ -35,7 +35,7 @@ const Hero = () => {
             <TypeAnimation
                 sequence={[
                     // Same substring at the start will only be typed out once, initially
-                    'A Website Deveoper',
+                    'A Website Developer',
                     1500, // wait 1s before replacing "Mice" with "Hamsters"
                     'Frontend',
                     1500,
@@ -53,23 +53,24 @@ const Hero = () => {
            <p className='text-base text-[#AEB7BE]'> I am MERN stack Developer with Experience in Both Frontend & Backend, Currently working as Freelancer on Fiverr and Upwork</p>
 
            <div className="  p-4 space-y-4 lg:space-y-0 md:flex-col md:items-center md:justify-center">
-              <button>
+              <button
+              className="mr-4 w-full w-fit px-6 py-3 font-bold hover:font-bold
+              bg-gradient-to-br from-orange-400 to-yellow-400 text-black hover:text-white rounded-lg hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500">
               <Link href="https://www.upwork.com/freelancers/~01b81678ded0dd054a/" passHref 
                 target="_blank"
-                className="w-full lg:w-fit px-6 py-3 font-bold hover:font-bold
-                           bg-gradient-to-br from-orange-400 to-yellow-400 text-black hover:text-white rounded-lg hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500"
+                
               >
-                Hire me
+                
               
-            </Link> 
+            </Link> Hire me
               </button>
 
               <button
-               onClick={downloadCV}
-                className="w-full lg:ml-4 lg:w-fit px-6 py-3 font-bold hover:font-bold
-                          bg-slate-800 text-white hover:text-white rounded-lg  hover:bg-slate-900"
-              >
-                Download CV
+                onClick={downloadCV}           
+                className="sm:w-full w-fit px-6 py-3 font-bold hover:font-bold 
+                          bg-slate-800 text-white hover:text-white rounded-lg  hover:bg-slate-900"   
+               >
+                 Download CV
               </button>
             </div>
 

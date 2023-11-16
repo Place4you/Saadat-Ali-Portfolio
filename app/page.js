@@ -10,6 +10,8 @@ import ProjectSection from "@/Components/ProjectSection"
 import TechStack from "@/Components/TechStack"
 import ParticleBackground from "@/Components/config/ParticleBackground"
 import particlesConfig from "@/Components/config/particles-config"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import React from "react"
 
 
@@ -18,7 +20,7 @@ export default function Home() {
     <main className=" min-h-screen  flex-col  container mx-auto ">
          <Navbar />
       <div className="container mx-auto px-12 py-4">
-            
+
       <ParticleBackground />
 
       <Hero />
@@ -27,6 +29,7 @@ export default function Home() {
       <AcheivementSection />
       <ProjectSection />
       <ContactSection />
+      <ToastContainer autoClose={3000} />
       </div>
       <Footer />
       

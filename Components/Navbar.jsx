@@ -66,13 +66,7 @@ const Navbar = () => {
       <div className='flex flex-wrap items-center justify-between mx-auto px-4'>
         <Link href={"/"} className='left-12 pl-24'>
           <div className='h-full'>
-            <Image
-              src="/Images/logo.png"
-              alt="logo"
-              style={logoStyle}
-              width={200}
-              height={80}
-            />
+           <h1 className='text-white text-5xl font-bold font-mono'>Sadi</h1> 
           </div>
         </Link>
 
