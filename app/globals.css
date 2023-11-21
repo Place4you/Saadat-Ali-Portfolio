@@ -1,4 +1,7 @@
 /* styles/globals.css */
+@import 'tailwind.css'; /* Import the generated Tailwind CSS file */
+
+/* styles/globals.css */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
