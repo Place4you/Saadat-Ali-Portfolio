@@ -1,4 +1,4 @@
-import './globals.css'
+import '../styles/output.css'; // Import the compiled CSS file
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
