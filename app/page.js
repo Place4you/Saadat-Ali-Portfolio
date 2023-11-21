@@ -17,7 +17,7 @@ import React from "react"
 
 export default function Home() {
   return (
-    <main className=" min-h-screen  flex-col  container mx-auto ">
+    <main className=" min-h-screen   flex-col  container mx-auto px-6">
          <Navbar />
       <div className="container mx-auto px-12 py-4">
 

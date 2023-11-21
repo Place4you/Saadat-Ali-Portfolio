@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className='bg-[#121212] ' lang="en">
+    <html className='bg-[#121212] px-6 mx-6' lang="en">
       <head>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" />
       </head>
