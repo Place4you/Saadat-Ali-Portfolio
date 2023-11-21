@@ -138,7 +138,7 @@ const AboutSection = () => {
 
                 <Image
                 className='order-2 lg:order-1 bg-orange-500 lg:h-full lg:w-full rounded-3xl place-self-center lg:place-self-start col-span-1 row-span-1 flex items-center justify-center '
-                        src="Images/sadi about.jpg"
+                        src="/Images/sadi about.jpg"
                         alt="hero image"
                         width={350}
                         height={350}
