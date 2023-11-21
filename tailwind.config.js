@@ -1,5 +1,3 @@
-const postcss = require('postcss');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   important: true,
@@ -15,5 +13,5 @@ module.exports = {
       },
     },
   },
-  plugins: [postcss],
+  plugins: [],
 }
