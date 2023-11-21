@@ -70,7 +70,7 @@ const Hero = () => {
             <div className='z-0 absolute bg-[#191919] w-full pb-4 h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2' style={{ backgroundImage: "url(/Images/yellow-background.png)", backgroundSize: "cover" }}>
               <Image
                 className='z-100 opacity-100'
-                src="/Images/sadi bitmoji.png"
+                src="/Images/sadi-bitmoji.png"
                 alt="hero image"
                 width={350}
                 height={350}
