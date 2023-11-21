@@ -1,3 +1,5 @@
+"use client"
+
 import '../styles/output.css'; // Import the compiled CSS file
 import { Inter } from 'next/font/google'
 
