@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 function TechStack() {
   const webTechnologies = [
-    { src: '/Images/HTML5.svg', name: 'HTML5' },
-    { src: '/Images/CSS3.svg', name: 'CSS3' },
-    { src: '/Images/Sass.svg', name: 'Sass' },
-    { src: '/Images/JavaScript.svg', name: 'JavaScript' },
-    { src: '/Images/TypeScript.png', name: 'TypeScript' },
-    { src: '/Images/VSCode.svg', name: 'VSCode' },
-    { src: '/Images/GitHub-icon.svg', name: 'GitHub' },
-    { src: '/Images/Tailwind.png', name: 'Tailwind' }
+    { src: 'Images/HTML5.svg', name: 'HTML5' },
+    { src: 'Images/CSS3.svg', name: 'CSS3' },
+    { src: 'Images/Sass.svg', name: 'Sass' },
+    { src: 'Images/JavaScript.svg', name: 'JavaScript' },
+    { src: 'Images/TypeScript.png', name: 'TypeScript' },
+    { src: 'Images/VSCode.svg', name: 'VSCode' },
+    { src: 'Images/GitHub-icon.svg', name: 'GitHub' },
+    { src: 'Images/Tailwind.png', name: 'Tailwind' }
 
 
 
@@ -19,10 +19,10 @@ function TechStack() {
   ]
 
   const techStack = [
-    { src: '/Images/mangodb.png', name: 'MongoDB' },
-    { src: '/Images/Express.png', name: 'Express' },
-    { src: '/Images/React.svg', name: 'React' },
-    { src: '/Images/Node.svg', name: 'Node' },
+    { src: 'Images/mangodb.png', name: 'MongoDB' },
+    { src: 'Images/Express.png', name: 'Express' },
+    { src: 'Images/React.svg', name: 'React' },
+    { src: 'Images/Node.svg', name: 'Node' },
 
   ]
 

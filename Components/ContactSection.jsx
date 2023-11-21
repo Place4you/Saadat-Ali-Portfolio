@@ -43,7 +43,7 @@ const ContactSection = () => {
             <div className="flex items-center mt-2">
               <a href="https://github.com/Place4you/" target="_blank" rel="noopener noreferrer">
                 <Image
-                  src="/Images/github-icon.svg"
+                  src="Images/github-icon.svg"
                   alt="github icon"
                   width={40}
                   height={40}
@@ -51,7 +51,7 @@ const ContactSection = () => {
               </a>
               <a href="https://www.linkedin.com/in/saadatali786/" target="_blank" rel="noopener noreferrer">
                 <Image
-                  src="/Images/linkedin-icon.svg"
+                  src="Images/linkedin-icon.svg"
                   alt="LinkedIn icon"
                   width={40}
                   height={40}
