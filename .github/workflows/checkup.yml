@@ -3,7 +3,7 @@ name: Dependency Management
 on:
   push:
     branches:
-      - main  # Change this to your main branch name
+      - master  # Change this to your main branch name
 
 jobs:
   check-update-install:
