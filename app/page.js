@@ -1,6 +1,6 @@
 "use client"
 import '../app/globals.css'
-
+require('../styles/tailwind.css');
 import AboutSection from "@/Components/AboutSection"
 import AcheivementSection from "@/Components/AcheivementSection"
 import ContactSection from "@/Components/ContactSection"
