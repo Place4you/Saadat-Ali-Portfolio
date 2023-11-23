@@ -1,0 +1,28 @@
+name: Dependency Management
+
+on:
+  push:
+    branches:
+      - master  # Change this to your main branch name
+
+jobs:
+  check-update-install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Change this to your desired Node.js version
+
+      - name: Check for outdated dependencies
+        run: npm outdated
+
+      - name: Update dependencies
+        run: npm update
+
+      - name: Install dependencies
+        run: npm install
