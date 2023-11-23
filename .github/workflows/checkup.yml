@@ -19,7 +19,7 @@ jobs:
           node-version: '18'  # Change this to your desired Node.js version
 
       - name: Check for outdated dependencies
-        run: npm outdated --json
+        run: npm outdated --json || true
 
       - name: Update dependencies
         run: npm update
