@@ -1,12 +1,11 @@
 module.exports = {
-  purge: ["./pages/**/*.{js, ts, jsx, tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  purge: ["./components/**/*.{js,ts,jsx,tsx}"],
   important: true,
   mode: 'jit',
   content: ["./app/**/*.{js,ts,jsx,tsx}", 
   "./public/**/*.{js,ts,jsx,tsx}", 
   "./components/**/*.{js,ts,jsx,tsx}", ],
 
-  
   theme: {
      extend: {
        backgroundImage: {
