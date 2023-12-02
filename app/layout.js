@@ -1,7 +1,7 @@
 
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
-import './globals.css'
+import '@/app/globals.css'
 
 export const metadata = {
   title: 'Saadat Ali',

@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./components/**/*.{js,ts,jsx,tsx}"],
+  purge: false,
   important: true,
   mode: 'jit',
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}",
