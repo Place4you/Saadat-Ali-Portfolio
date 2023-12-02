@@ -9,7 +9,7 @@ const TabButton = ({active, selectTab, children}) => {
 
   return (
     <button onClick={selectTab}>
-       <p className={`text-[#ADB7BE] text-justify ${btncol}`}>
+       <p className={`bg-blue-500 text-[#ADB7BE] text-justify ${btncol}`}>
         {children}
         </p> 
         </button>

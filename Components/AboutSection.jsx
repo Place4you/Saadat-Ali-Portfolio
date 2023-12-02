@@ -35,15 +35,15 @@ const AboutSection = () => {
             id : "skills",
             cotent : (
                 <>
-                <ul>
-                <li className=' list-disc italic '>HTML5</li>
-                <li className=' list-disc italic '>CSS3</li>
-                <li className=' list-disc italic '>SAAS</li>
-                <li className=' list-disc italic '>Tailwind</li>
-                <li className=' list-disc italic '>Javascript</li>
-                <li className=' list-disc italic '>React</li>
-                <li className=' list-disc italic '>Express</li>
-                <li className=' list-disc italic '>MangoDB</li>
+                <ul className='text-2xl '>
+                <li className='  font-mono mt-3 list-disc italic '>HTML5</li>
+                <li className='  font-mono mt-3 list-disc italic '>CSS3</li>
+                <li className='  font-mono mt-3 list-disc italic '>SAAS</li>
+                <li className='  font-mono mt-3 list-disc italic '>Tailwind</li>
+                <li className='  font-mono mt-3 list-disc italic '>Javascript</li>
+                <li className='  font-mono mt-3 list-disc italic '>React</li>
+                <li className='  font-mono mt-3 list-disc italic '>Express</li>
+                <li className='  font-mono mt-3 list-disc italic '>MangoDB</li>
                 </ul>
                 </>
             )
@@ -138,10 +138,11 @@ const AboutSection = () => {
 
                 <Image
                 className='order-2 lg:order-1 bg-orange-500 lg:h-full lg:w-full rounded-3xl place-self-center lg:place-self-start col-span-1 row-span-1 flex items-center justify-center '
-                        src="/Images/sadi-about.jpg"
+                        src="/Images/sadi-about.jpeg"
                         alt="hero image"
-                        width={350}
-                        height={350}
+                        width={250}
+                        height={250}
+                        unoptimized
                     />
                 
                 <div className='order-1 lg:order-2  '>
