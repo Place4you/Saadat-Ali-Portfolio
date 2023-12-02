@@ -3340,7 +3340,10 @@ html {
 
 /*# sourceMappingURL=ReactToastify.css.map */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Additional custom styles */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
