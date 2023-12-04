@@ -1,5 +1,4 @@
 module.exports = {
-  purge: false,
   important: true,
   mode: 'jit',
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,5 +17,9 @@ module.exports = {
        },
      },
   },
-  plugins: [],
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+    ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
+  }
  }
