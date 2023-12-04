@@ -8,6 +8,13 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+    ...(process.env.NODE_ENV === 'production' ? [require('cssnano')] : []),
+    // Other plugins...
+  ],
+
   theme: {
     extend: {
       backgroundImage: {
