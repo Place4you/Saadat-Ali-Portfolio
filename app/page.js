@@ -1,4 +1,6 @@
 "use client"
+import '@/app/globals.css'
+
 import AboutSection from "@/Components/AboutSection"
 import AcheivementSection from "@/Components/AcheivementSection"
 import ContactSection from "@/Components/ContactSection"
