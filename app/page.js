@@ -1,21 +1,15 @@
 "use client"
-import '@/app/globals.css'
-
-import AboutSection from "@/Components/AboutSection"
-import AcheivementSection from "@/Components/AcheivementSection"
-import ContactSection from "@/Components/ContactSection"
-import Footer from "@/Components/Footer"
-import Hero from "@/Components/Hero"
-import Navbar from "@/Components/Navbar"
-import Navlink from "@/Components/Navlink"
-import ProjectSection from "@/Components/ProjectSection"
-import TechStack from "@/Components/TechStack"
-import ParticleBackground from "@/Components/config/ParticleBackground"
-import particlesConfig from "@/Components/config/particles-config"
+import AboutSection from "@/components/AboutSection"
+import AcheivementSection from "@/components/AcheivementSection"
+import ContactSection from "@/components/ContactSection"
+import Footer from "@/components/Footer"
+import Hero from "@/components/Hero"
+import Navbar from "@/components/Navbar"
+import ProjectSection from "@/components/ProjectSection"
+import TechStack from "@/components/TechStack"
+import ParticleBackground from "@/components/config/ParticleBackground"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import React from "react"
-
 
 export default function Home() {
   return (
@@ -34,8 +28,6 @@ export default function Home() {
       <ToastContainer autoClose={3000} />
       </div>
       <Footer />
-      
-
     </main>
   )
 }

@@ -4,25 +4,21 @@ import { motion } from 'framer-motion';
 
 function TechStack() {
   const webTechnologies = [
-    { src: '/Images/HTML5.svg', name: 'HTML5' },
-    { src: '/Images/CSS3.svg', name: 'CSS3' },
-    { src: '/Images/Sass.svg', name: 'Sass' },
-    { src: '/Images/JavaScript.svg', name: 'JavaScript' },
-    { src: '/Images/TypeScript.png', name: 'TypeScript' },
-    { src: '/Images/VSCode.svg', name: 'VSCode' },
-    { src: '/Images/GitHub-icon.svg', name: 'GitHub' },
-    { src: '/Images/Tailwind.png', name: 'Tailwind' }
-
-
-
-
+    { src: '/images/html5.svg', name: 'HTML5' },
+    { src: '/images/css3.svg', name: 'CSS3' },
+    { src: '/images/sass.svg', name: 'Sass' },
+    { src: '/images/javascript.svg', name: 'JavaScript' },
+    { src: '/images/typescript.png', name: 'TypeScript' },
+    { src: '/images/vscode.svg', name: 'VSCode' },
+    { src: '/images/github-icon.svg', name: 'GitHub' },
+    { src: '/images/tailwind.png', name: 'Tailwind' }
   ]
 
   const techStack = [
-    { src: '/Images/mangodb.png', name: 'MongoDB' },
-    { src: '/Images/Express.png', name: 'Express' },
-    { src: '/Images/React.svg', name: 'React' },
-    { src: '/Images/Node.svg', name: 'Node' },
+    { src: '/images/mangodb.png', name: 'MongoDB' },
+    { src: '/images/express.png', name: 'Express' },
+    { src: '/images/react.svg', name: 'React' },
+    { src: '/images/node.svg', name: 'Node' },
 
   ]
 
@@ -58,6 +54,7 @@ function TechStack() {
               alt={language.name}
               width={70}
               height={70}
+              unoptimized
               style={{
                 objectFit: 'cover', // Apply your desired objectFit value here
               }}
@@ -84,6 +81,7 @@ function TechStack() {
             <Image
               src={tech.src}
               alt={tech.name}
+              unoptimized
               width={70}
               height={70}
               style={{

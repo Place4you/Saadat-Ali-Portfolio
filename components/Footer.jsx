@@ -11,7 +11,7 @@ const Footer = () => {
           <Link href={"/"} className=''>
             <div className='p-0 m-0  min-h-fit left-0'>
               <Image
-                src="/Images/logo.png"
+                src="/images/logo.png"
                 alt="logo"
                 width={80}
                 height={80}
