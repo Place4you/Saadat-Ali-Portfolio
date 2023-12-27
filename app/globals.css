@@ -4,10 +4,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import 'base';
-@import 'components';
-@import 'utilities';
-
 /* Additional custom styles  */
 html {
   scroll-behavior: smooth !important;
