@@ -67,10 +67,10 @@ const Hero = () => {
 
         <div className='col-span-5 place-self-center mb-4'>
           <div className='relative w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden border-4 border-yellow-400'>
-            <div className='z-0 absolute bg-[#191919] w-full pb-4 h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2' style={{ backgroundImage: "url(/Images/yellow-background.png)", backgroundSize: "cover" }}>
+            <div className='z-0 absolute bg-[#191919] w-full pb-4 h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2' style={{ backgroundImage: "url(/images/yellow-background.png)", backgroundSize: "cover" }}>
               <Image
                 className='z-100 opacity-100'
-                src="/Images/sadi-bitmoji.png"
+                src="/images/sadi-bitmoji.png"
                 alt="hero image"
                 width={350}
                 height={350}

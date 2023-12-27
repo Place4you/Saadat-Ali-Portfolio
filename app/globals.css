@@ -1,9 +1,14 @@
 /*# sourceMappingURL=ReactToastify.css.map */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* Additional custom styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'base';
+@import 'components';
+@import 'utilities';
+
+/* Additional custom styles  */
 html {
   scroll-behavior: smooth !important;
 }
