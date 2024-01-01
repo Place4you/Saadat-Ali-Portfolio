@@ -1,6 +1,6 @@
 # Saadat Ali Portfolio
 
-![Saadat Ali Portfolio Screenshot](link_to_screenshot_here)
+![Saadat Ali Portfolio Screenshot](public/thumbnail.JPG)
 
 This repository contains the code for my personal portfolio website built with Next.js and React.
 
