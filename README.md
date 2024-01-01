@@ -5,7 +5,7 @@
 This repository contains the code for my personal portfolio website built with Next.js and React.
 
 ## Live Demo
-Access the live version of the project: [Netlify Link]([(https://saadataliportfolio.netlify.app/)])
+Access the live version of the project: [Netlify Link](https://saadataliportfolio.netlify.app/)
 
 This project is also deployed and hosted on Netlify. Click the link above to explore the live version.
 
