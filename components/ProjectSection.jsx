@@ -123,7 +123,7 @@ const ProjectSection = () => {
       title: "Pizza Clone Landing Page",
       description: "Responsive Pizza clone landing page",
       tag: ["ALL", "HTML/CSS"],
-      imageUrl: "/images/8.jpg",
+      imageUrl: "/images/9.jpg",
       github: "https://github.com/Place4you/Creative-Golf-Landing-page",
       demoUrl: "https://creativegolflanding.netlify.app/",
     },

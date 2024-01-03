@@ -21,7 +21,7 @@ export default function Home() {
 
       <Hero />
       <TechStack />
-      <AboutSection />
+      <AboutSection id="#about" />
       <AcheivementSection />
       <ProjectSection />
       <ContactSection />
