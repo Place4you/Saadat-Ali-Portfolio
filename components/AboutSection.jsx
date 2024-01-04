@@ -147,7 +147,7 @@ const AboutSection = () => {
                 
                 <div className='order-1 lg:order-2  '>
                     <h1 className='text-4xl lg:text-6xl font-extrabold pb-3  text-left sm:text-center'>👋 About me</h1>
-                    <p className='text-lg pb-2 text-justify'> Hello, I'm Saadat, a <i>Frontend developer</i> with a passion for crafting stunning websites. I specialize in HTML, CSS, JavaScript, and React to create visually appealing and seamlessly functioning web designs. I'm experienced in Shopify customization, WordPress development, and turning Figma and PSD designs into reality. As a team player, I enjoy collaborating on projects that merge design and technology. My goal is to create web experiences that truly stand out. I'm always excited to connect with fellow creators and collaborators, so let's make web magic happen together!</p>      
+                    <p className='text-lg pb-2 '> Hello, I'm Saadat, a <i>Frontend developer</i> with a passion for crafting stunning websites. I specialize in HTML, CSS, JavaScript, and React to create visually appealing and seamlessly functioning web designs. I'm experienced in Shopify customization, WordPress development, and turning Figma and PSD designs into reality. As a team player, I enjoy collaborating on projects that merge design and technology. My goal is to create web experiences that truly stand out. I'm always excited to connect with fellow creators and collaborators, so let's make web magic happen together!</p>      
 
                         <div className='mt-4 flex justify-start gap-3 items-center lg:text-2xl '>
                             <TabButton 
