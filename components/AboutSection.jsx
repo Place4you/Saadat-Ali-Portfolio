@@ -35,15 +35,15 @@ const AboutSection = () => {
             id : "skills",
             cotent : (
                 <>
-                <ul className='text-2xl '>
-                <li className='  font-mono mt-3 list-disc italic '>HTML5</li>
-                <li className='  font-mono mt-3 list-disc italic '>CSS3</li>
-                <li className='  font-mono mt-3 list-disc italic '>SAAS</li>
-                <li className='  font-mono mt-3 list-disc italic '>Tailwind</li>
-                <li className='  font-mono mt-3 list-disc italic '>Javascript</li>
-                <li className='  font-mono mt-3 list-disc italic '>React</li>
-                <li className='  font-mono mt-3 list-disc italic '>Express</li>
-                <li className='  font-mono mt-3 list-disc italic '>MangoDB</li>
+                <ul>
+                <li className=' list-disc italic '>HTML5</li>
+                <li className=' list-disc italic '>CSS3</li>
+                <li className=' list-disc italic '>Javascript</li>
+                <li className=' list-disc italic '>PHP</li>
+                <li className=' list-disc italic '>Tailwind</li>
+                <li className=' list-disc italic '>React</li>
+                <li className=' list-disc italic '>Laravel</li>
+                <li className=' list-disc italic '>Blade</li>
                 </ul>
                 </>
             )
@@ -87,6 +87,14 @@ const AboutSection = () => {
             cotent : (
                 <>
                 <ul className="text-white">
+                
+                   <li className=' list-disc '>
+                        Let's Learn Laravel: A Guided Path For Beginners
+                        <ul className="text-gray-400 italic mb-2">
+                        <li>Udemy</li>
+                        <li>Issued Jun 2024</li>
+                        </ul>
+                    </li>
                     <li className=' list-disc '>
                         Introduction to HTML5
                         <ul className="text-gray-400 italic mb-2">
@@ -138,16 +146,15 @@ const AboutSection = () => {
 
                 <Image
                 className='order-2 lg:order-1 bg-orange-500 lg:h-full lg:w-full rounded-3xl place-self-center lg:place-self-start col-span-1 row-span-1 flex items-center justify-center '
-                        src="/images/sadi-about.jpeg"
+                        src="/Images/sadi-about.jpg"
                         alt="hero image"
-                        width={250}
-                        height={250}
-                        unoptimized
+                        width={350}
+                        height={350}
                     />
                 
                 <div className='order-1 lg:order-2  '>
                     <h1 className='text-4xl lg:text-6xl font-extrabold pb-3  text-left sm:text-center'>👋 About me</h1>
-                    <p className='text-lg pb-2 '> Hello, I'm Saadat, a <i>Frontend developer</i> with a passion for crafting stunning websites. I specialize in HTML, CSS, JavaScript, and React to create visually appealing and seamlessly functioning web designs. I'm experienced in Shopify customization, WordPress development, and turning Figma and PSD designs into reality. As a team player, I enjoy collaborating on projects that merge design and technology. My goal is to create web experiences that truly stand out. I'm always excited to connect with fellow creators and collaborators, so let's make web magic happen together!</p>      
+                    <p className='text-lg pb-2 text-justify'> Hello, I'm Saadat, a <i>Passionate Developer</i> with a passion for crafting stunning websites. I specialize in HTML, CSS, JavaScript, PHP, Laravel & React to create visually appealing and seamlessly functioning web designs. I'm experienced in writing code for custom websites. As a team player, I enjoy collaborating on projects that merge design and technology. My goal is to create web experiences that truly stand out. I'm always excited to connect with fellow creators and collaborators, so let's make web magic happen together!</p>      
 
                         <div className='mt-4 flex justify-start gap-3 items-center lg:text-2xl '>
                             <TabButton 
