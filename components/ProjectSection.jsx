@@ -38,6 +38,11 @@ const ProjectSection = () => {
           setAnimationRanForReact(true);
         }
         break;
+        case 'PHP':
+          if (!animationRanForReact) {
+            setAnimationRanForReact(true);
+          }
+          break;
       default:
         break;
     }
@@ -57,12 +62,12 @@ const ProjectSection = () => {
     },
     {
       id: "2",
-      title: "Blog App",
-      description: "A blogging platform built with React",
-      tag:["ALL", "HTML/CSS"],
-      imageUrl: "/images/2.png",
-      github: "/",
-      demoUrl: "",
+      title: "Carto",
+      description: "Laravel-based social media application",
+      tag:["ALL", "PHP"],
+      imageUrl: "/images/carto.jpg",
+      github: "https://github.com/Place4you/Carto-App",
+      demoUrl: "bit.ly/4bhafaR",
     },
     {
       id: "3",
