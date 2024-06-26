@@ -67,19 +67,10 @@ const ProjectSection = () => {
       tag:["ALL", "PHP"],
       imageUrl: "/images/carto.jpg",
       github: "https://github.com/Place4you/Carto-App",
-      demoUrl: "bit.ly/4bhafaR",
+      demoUrl: "https://bit.ly/4bhafaR",
     },
     {
       id: "3",
-      title: "E-commerce Site",
-      description: "An online store using Shopify",
-      tag: ["ALL", "HTML/CSS"],
-      imageUrl: "/images/3.png",
-      github: "/",
-      demoUrl: "",
-    },
-    {
-      id: "4",
       title: "Bubble Game Javascript",
       description: "Bubble game developed using JavaScript and SCSS",
       tag: ["ALL", "React"],
@@ -88,7 +79,7 @@ const ProjectSection = () => {
       demoUrl: "https://saadatbubblegame.netlify.app/",
     },
     {
-      id: "5",
+      id: "4",
       title: "Portfolio Website",
       description: "Personal website showcasing my work",
       tag: ["ALL", "React"],
@@ -97,7 +88,7 @@ const ProjectSection = () => {
       demoUrl: "",
     },
     {
-      id: "6",
+      id: "5",
       title: "Headphone-Landing-Page",
       description: "Complete responsive headphone landing page built using HTML and SCSS.",
       tag: ["ALL", "HTML/CSS"],
@@ -106,7 +97,7 @@ const ProjectSection = () => {
       demoUrl: "https://sadiheadphone.netlify.app/",
     },
     {
-      id: "7",
+      id: "6",
       title: "DigitalUk Landing Page",
       description: "Responsive digital agency clone landing page",
       tag: ["ALL", "HTML/CSS"],
@@ -115,7 +106,7 @@ const ProjectSection = () => {
       demoUrl: "https://saadatdigitalagency.netlify.app/",
     },
     {
-      id: "8",
+      id: "7",
       title: "Creative Golf Landing Page",
       description: "Responsive digital agency clone landing page",
       tag: ["ALL", "HTML/CSS"],
@@ -124,7 +115,7 @@ const ProjectSection = () => {
       demoUrl: "https://creativegolflanding.netlify.app/",
     },
     {
-      id: "9",
+      id: "8",
       title: "Pizza Clone Landing Page",
       description: "Responsive Pizza clone landing page",
       tag: ["ALL", "HTML/CSS"],
