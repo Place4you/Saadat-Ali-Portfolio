@@ -9,8 +9,8 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '\SAADAT ALI CV.pdf'; // Replace with the actual path to your CV file
-    link.download = 'SAADAT ALI CV.pdf'; // Change the filename if needed
+    link.href = '\SAADAT ALI CV 2024.pdf'; // Replace with the actual path to your CV file
+    link.download = 'SAADAT ALI CV 2024.pdf'; // Change the filename if needed
     link.click();
   };
 
@@ -45,7 +45,7 @@ const Hero = () => {
             repeat={Infinity}
           />
 
-          <p className='text-base text-[#AEB7BE]'> I am MERN stack Developer with Experience in Both Frontend & Backend, Currently working as Freelancer on Fiverr and Upwork</p>
+          <p className='text-base text-[#AEB7BE]'> I am Full stack Developer with Experience in Both Frontend & Backend, Currently working as Freelancer on Fiverr and Upwork</p>
 
           <div className=" p-4 space-y-4 lg:space-y-0 lg:flex ">
             <Link href="https://www.upwork.com/freelancers/~01b81678ded0dd054a/" passHref target="_blank">
