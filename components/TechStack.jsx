@@ -18,8 +18,8 @@ function TechStack() {
   ]
 
   const techStack = [
-    { src: '/images/mangodb.png', name: 'MongoDB' },
-    { src: '/images/express.png', name: 'Express' },
+    { src: '/images/php.png', name: 'Php' },
+    { src: '/images/laravel.png', name: 'Laravel' },
     { src: '/images/react.svg', name: 'React' },
     { src: '/images/node.svg', name: 'Node' },
 
@@ -42,7 +42,7 @@ function TechStack() {
         Web Technologies
       </h1>
       <p className="font-mono">
-        As a frontend developer, I am well-versed in a variety of web technologies that enable me to create stunning and interactive web experiences. From the foundational building blocks like HTML5 and CSS3 to the dynamic capabilities of JavaScript and React, I harness these technologies to craft user-friendly and visually appealing websites. With expertise in tools like VSCode, GitHub, and Tailwind CSS, I ensure that my web projects are not only aesthetically pleasing but also efficient and easy to maintain. My proficiency in these technologies empowers me to bring your web design visions to life, blending creativity with functionality.
+        As a FullStack developer, I am well-versed in a variety of web technologies that enable me to create stunning and interactive web experiences. From the foundational building blocks like HTML5 and CSS3 to the dynamic capabilities of JavaScript and React, I harness these technologies to craft user-friendly and visually appealing websites. With expertise in tools like VSCode, GitHub, and Tailwind CSS, I ensure that my web projects are not only aesthetically pleasing but also efficient and easy to maintain. For the Backend, i have experience in Laravel to handle Database, Api etc. My proficiency in these technologies empowers me to bring your web design visions to life, blending creativity with functionality.
       </p>
     </div>
     <div className="pt-24 w-full lg:w-1/2">

@@ -87,7 +87,14 @@ const AboutSection = () => {
             cotent : (
                 <>
                 <ul className="text-white">
-                
+                     
+                    <li className=' list-disc '>
+                        LARAVEL QUIZ BEGINNER LEVEL
+                        <ul className="text-gray-400 italic mb-2">
+                        <li>SkillValue Training</li>
+                        <li>Issued Jun 2024</li>
+                        </ul>
+                    </li>
                    <li className=' list-disc '>
                         Let's Learn Laravel: A Guided Path For Beginners
                         <ul className="text-gray-400 italic mb-2">
