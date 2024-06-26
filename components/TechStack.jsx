@@ -6,12 +6,15 @@ function TechStack() {
   const webTechnologies = [
     { src: '/images/html5.svg', name: 'HTML5' },
     { src: '/images/css3.svg', name: 'CSS3' },
-    { src: '/images/sass.svg', name: 'Sass' },
+    { src: '/images/php.png', name: 'PHP' },
     { src: '/images/javascript.svg', name: 'JavaScript' },
     { src: '/images/typescript.png', name: 'TypeScript' },
+    { src: '/images/laravel.png', name: 'Laravel' },
+    { src: '/images/tailwind.png', name: 'Tailwind' },
     { src: '/images/vscode.svg', name: 'VSCode' },
     { src: '/images/github-icon.svg', name: 'GitHub' },
-    { src: '/images/tailwind.png', name: 'Tailwind' }
+    { src: '/images/sass.svg', name: 'Sass' },
+
   ]
 
   const techStack = [
