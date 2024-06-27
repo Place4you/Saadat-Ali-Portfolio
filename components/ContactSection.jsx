@@ -33,8 +33,8 @@ const ContactSection = () => {
   };
   return (
     <>
-      <section id="contact" className="mt-5">
-        <div className="grid md:grid-cols-2 md:grid-flow-col gap-8 py-8 px-4 xl:gap-16 sm:gap-16 text-white">
+      <section id="contact" className="my-5 sm:mb-12">
+        <div className="grid md:grid-cols-2 md:grid-flow-col sm:grid-cols-1 gap-8   md:overflow-y-auto xl:gap-16  text-white ">
           <div>
             <h1 className="lg:text-2xl text-lg font-semibold pb-3">Let's Connect</h1>
             <p className="text-[#ADB7BE]">
