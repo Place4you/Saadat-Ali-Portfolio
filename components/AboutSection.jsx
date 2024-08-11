@@ -152,7 +152,7 @@ const AboutSection = () => {
         <div className='grid md:grid-cols-2 md:grid-flow-col gap-8 py-8 px-4 xl:gap-16 sm:gap-16 text-white bg-black bg-opacity-80'>
   <Image
     className='order-2 lg:order-1 bg-orange-500 h-auto w-full rounded-3xl place-self-center lg:place-self-start col-span-1 row-span-1 flex items-center justify-center'
-    src="/images/sadi-about.jpg" // Ensure the path is correct
+    src="/images/sadi-about.jpeg" // Ensure the path is correct
     alt="hero image"
     width={350}
     height={350}
