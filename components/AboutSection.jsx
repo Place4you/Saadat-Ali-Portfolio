@@ -149,44 +149,52 @@ const AboutSection = () => {
         
             
 
-            <div className=' grid md:grid-cols-2 md:grid-flow-col gap-8 py-8 px-4 xl:gap-16 sm:gap-16 text-white bg-black bg-opacity-80' >       
+        <div className='grid md:grid-cols-2 md:grid-flow-col gap-8 py-8 px-4 xl:gap-16 sm:gap-16 text-white bg-black bg-opacity-80'>
+  <Image
+    className='order-2 lg:order-1 bg-orange-500 h-auto w-full rounded-3xl place-self-center lg:place-self-start col-span-1 row-span-1 flex items-center justify-center'
+    src="/images/sadi-about.jpg" // Ensure the path is correct
+    alt="hero image"
+    width={350}
+    height={350}
+    layout="responsive"
+  />
+  
+  <div className='order-1 lg:order-2 sm:w-full'>
+    <h1 className='text-4xl lg:text-6xl font-extrabold pb-3 lg:text-left sm:text-center'>👋 About me</h1>
+    <p className='text-lg pb-2 text-justify ml-0 pr-6'>
+      Hello, I'm Saadat, a <i>Passionate Developer</i> with a passion for crafting stunning websites. I specialize in HTML, CSS, JavaScript, PHP, Laravel & React to create visually appealing and seamlessly functioning web designs. I'm experienced in writing code for custom websites. As a team player, I enjoy collaborating on projects that merge design and technology. My goal is to create web experiences that truly stand out. I'm always excited to connect with fellow creators and collaborators, so let's make web magic happen together!
+    </p>
 
-                <Image
-                className='order-2 lg:order-1 bg-orange-500 h-full w-full rounded-3xl place-self-center lg:place-self-start col-span-1 row-span-1 flex items-center justify-center '
-                        src="/Images/sadi-about.jpg"
-                        alt="hero image"
-                        width={350}
-                        height={350}
-                    />
-                
-                <div className='order-1 lg:order-2  sm:w-full  '>
-                    <h1 className='text-4xl lg:text-6xl font-extrabold pb-3 lg:text-left  sm:text-center'>👋 About me</h1>
-                    <p className='text-lg pb-2 text-justify ml-0 pr-6 '> Hello, I'm Saadat, a <i>Passionate Developer</i> with a passion for crafting stunning websites. I specialize in HTML, CSS, JavaScript, PHP, Laravel & React to create visually appealing and seamlessly functioning web designs. I'm experienced in writing code for custom websites. As a team player, I enjoy collaborating on projects that merge design and technology. My goal is to create web experiences that truly stand out. I'm always excited to connect with fellow creators and collaborators, so let's make web magic happen together!</p>      
+    <div className='mt-4 flex justify-start gap-3 items-center lg:text-2xl'>
+      <TabButton 
+        className="text-white border-b border-orange-600 mr-3"
+        selectTab={() => handleTabChange("skills")} 
+        active={tab === "skills"}
+      >
+        Skills
+      </TabButton>
+      <TabButton 
+        className="text-white border-b border-orange-600 mr-3"
+        selectTab={() => handleTabChange("education")} 
+        active={tab === "education"}
+      >
+        Education
+      </TabButton>
+      <TabButton 
+        className="text-white border-b border-orange-600 mr-3"
+        selectTab={() => handleTabChange("certification")} 
+        active={tab === "certification"}
+      >
+        Certification
+      </TabButton>
+    </div>
+    
+    <div className='mt-3 ml-5'>
+      {TAB_DATA.find((t) => t.id === tab).cotent}
+    </div>
+  </div>
+</div>
 
-                        <div className='mt-4  flex justify-start gap-3 items-center lg:text-2xl '>
-                            <TabButton 
-                            className="text-white border-b border-orange-600 mr-3"
-                            selectTab={()=>{ handleTabChange("skills")}} 
-                            active={ tab === "skills"}
-                            >Skills</TabButton>
-                            <TabButton 
-                            className="text-white border-b border-orange-600 mr-3"
-                            selectTab={()=>{ handleTabChange("education")}} 
-                            active={ tab === "education"}
-                            >Education</TabButton>
-                            <TabButton 
-                            className="text-white border-b border-orange-600 mr-3"
-                            selectTab={()=>{ handleTabChange("certification")}} 
-                            active={ tab === "certification"}
-                            >Certification</TabButton>
-                            
-                        </div>
-                        <div className='mt-3 ml-5'>
-                            
-                            {TAB_DATA.find((t)=>((t.id)=== tab) ).cotent}
-                        </div>
-                    </div>
-            </div> 
         </motion.div>
     </section>
     </>
