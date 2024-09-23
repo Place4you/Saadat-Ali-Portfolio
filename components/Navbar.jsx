@@ -1,106 +1,104 @@
-"use client"
+"use client";
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { Bars3Icon } from '@heroicons/react/24/solid'; // Keeping the Bars3Icon for mobile menu open icon
 import Image from 'next/image';
-import Navlink from './Navlink';
-import React, { useState, useEffect } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-import MobileOverlay from './MobileOverlay';
+
 const navLinks = [
-  {
-    title: "About",
-    path: "#about"
-  },
-  {
-    title: "Project",
-    path: "#projects"
-  },
-  {
-    title: "Contact",
-    path: "#contact"
-  }
+  { title: "About", path: "#about", icon: "fa-solid fa-user" },
+  { title: "Projects", path: "#projects", icon: "fa-solid fa-folder-open" },
+  { title: "Contact", path: "#contact", icon: "fa-solid fa-envelope" },
 ];
 
 const Navbar = () => {
   const [mbmenuopen, setMbmenuopen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
-  // Define the navbar and logo heights
-  const normalNavbarHeight = '10rem'; // Adjust as needed
-  const stickyNavbarHeight = '5rem'; // Adjust as needed
-  const logoWidth = '6rem'; // Adjust as needed
-
-  // Apply different styles for the normal and sticky navbars
-  const normalNavbarStyle = {
-    height: normalNavbarHeight,
-  };
-
-  const stickyNavbarStyle = {
-    height: stickyNavbarHeight,
-  };
-
-  const logoStyle = {
-    width: logoWidth,
-  };
-
   useEffect(() => {
     const handleScroll = () => {
-      // Check the scroll position to determine if the navbar should become sticky
-      if (window.scrollY > 100) { // Adjust the scroll threshold as needed
+      if (window.scrollY > 100) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
       }
     };
 
-    // Add a scroll event listener
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      // Remove the event listener when the component unmounts
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const stickyNavbarStyle = 'bg-[#19191E] shadow-lg';
+  const normalNavbarStyle = 'bg-transparent';
+
   return (
-    <nav className={`sticky top-0 z-50 transition-all duration-500 ease-in-out ${isSticky ? 'bg-[#19191E]' : 'bg-transparent'} ${isSticky ? stickyNavbarStyle : normalNavbarStyle}`}>
-      <div className='flex flex-wrap items-center justify-between mx-auto px-4'>
-        <Link href={"/"} className='left-12 pl-24'>
-          <div className='h-full'>
-           <h1 className='text-white text-5xl font-bold font-mono'>Sadi</h1> 
-          </div>
+    <nav
+      className={`sticky px-12 top-0 z-50 transition-all duration-500 ease-in-out ${
+        isSticky ? stickyNavbarStyle : normalNavbarStyle
+      }`}
+    >
+      <div className="flex items-center justify-between mx-auto px-4 py-3 md:py-4">
+        {/* Logo (Text: "Sadi") */}
+        <Link href="/" className="text-white text-3xl font-bold z-50">
+          Sadi
         </Link>
 
-        <div className='mobile-menu block md:hidden px-4 py-3'>
-          {!mbmenuopen ?
-            <button
-              onClick={() => { setMbmenuopen(true); }}
-              className='flex items-center justify-center px-3 py-2 text-yellow-500 font-bolder border border-slate-300 rounded hover:bg-white hover:text-yellow-600'>
-              <Bars3Icon className='h-5 w-5' />
-            </button>
-            :
-            <button
-              onClick={() => { setMbmenuopen(false); }}
-              className='flex items-center justify-center px-3 py-2 text-yellow-500 font-bolder border border-slate-300 rounded hover:bg-white hover:text-yellow-600'>
-              <XMarkIcon className='h-5 w-5' />
-            </button>
-          }
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setMbmenuopen(!mbmenuopen)}
+            className="text-yellow-500 hover:text-yellow-600 border border-yellow-500 p-2 rounded"
+          >
+            {mbmenuopen ? (
+              <i className="fa fa-times h-6 w-6"></i> // Font Awesome CDN close icon
+            ) : (
+              <Bars3Icon className="h-6 w-6" /> // HeroIcon for menu open
+            )}
+          </button>
         </div>
 
-        <div className='menu hidden mr-20 pb-5 md:block md:w-auto transition-all duration-800 ease-in-out '>
-          <ul className='flex flex-row space-x-8 md:p-0 mt-8 mr-8 sm:p-3'>
-            {navLinks.map((link, index) => {
-              return (
-                <li key={index} className='text-orange-500 font-mono text-2xl'>
-                  <Navlink href={link.path} title={link.title} />
-                </li>)
-            })}
-          </ul>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-8">
+          {navLinks.map((link, index) => (
+            <Link
+              key={index}
+              href={link.path}
+              className="text-orange-500 font-mono text-2xl hover:text-orange-300 transition-colors duration-200"
+            >
+              {link.title}
+            </Link>
+          ))}
         </div>
       </div>
 
-      {mbmenuopen ? <MobileOverlay links={navLinks} /> : null}
+      {/* Mobile Menu Overlay */}
+      {mbmenuopen && (
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-90 z-40 flex flex-col items-center justify-center min-h-screen p-4 scroll-smooth">
+          <button
+            onClick={() => setMbmenuopen(false)}
+            className="absolute top-4 right-4 z-50 text-white text-3xl"
+          >
+            <i className="fa fa-times h-8 w-8"></i> {/* Close icon */}
+          </button>
+
+          {/* Mobile Navigation Links */}
+          <ul className="space-y-6 text-white text-xl">
+            {navLinks.map((link, index) => (
+              <li key={index} className="w-full text-left px-4">
+                <Link
+                  href={link.path}
+                  onClick={() => setMbmenuopen(false)}
+                  className="flex items-center py-2 hover:bg-gray-700 rounded transition-colors duration-300"
+                >
+                  <i className={link.icon + " mr-3"}></i> {/* Font Awesome Icon */}
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
-}
+};
 
 export default Navbar;
