@@ -37,13 +37,17 @@ const AboutSection = () => {
                 <>
                 <ul>
                 <li className=' list-disc italic '>HTML5</li>
+                <li className=' list-disc italic '>Blade</li>
                 <li className=' list-disc italic '>CSS3</li>
-                <li className=' list-disc italic '>Javascript</li>
-                <li className=' list-disc italic '>PHP</li>
                 <li className=' list-disc italic '>Tailwind</li>
+                <li className=' list-disc italic '>Javascript</li>
+                <li className=' list-disc italic '>Typescript</li>
+                <li className=' list-disc italic '>Angular</li>
                 <li className=' list-disc italic '>React</li>
                 <li className=' list-disc italic '>Laravel</li>
-                <li className=' list-disc italic '>Blade</li>
+                <li className=' list-disc italic '>PHP</li>
+                <li className=' list-disc italic '>Wordpress</li>
+                <li className=' list-disc italic '>Shopify Store Setup</li>
                 </ul>
                 </>
             )
