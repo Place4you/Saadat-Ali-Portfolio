@@ -1,4 +1,5 @@
 "use client";
+
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,7 +8,7 @@ import Navlink from './Navlink';
 import MobileOverlay from './MobileOverlay';
 
 const navLinks = [
-  { title: "Home", path: "#hero" },
+  { title: "Home", path: "#home" },
   { title: "About", path: "#about" },
   { title: "Projects", path: "#projects" },
   { title: "Contact", path: "#contact" },
@@ -24,6 +25,7 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => setMbmenuopen((prev) => !prev);
+  const handleMenuClose = () => setMbmenuopen(false);
 
   const stickyNavbarStyle = 'bg-[#19191E] shadow-lg';
   const normalNavbarStyle = 'bg-transparent';
@@ -41,7 +43,7 @@ const Navbar = () => {
         <div className="md:hidden z-50">
           <button
             onClick={toggleMenu}
-            className="text-[#ECAB09] border border-[#ECAB09] p-2 rounded-full transition-transform duration-300 transform hover:scale-110"
+            className={`text-[#ECAB09] border border-r-2 border-[#ECAB09] p-1 rounded-md transition-transform duration-300 transform hover:scale-110 ${mbmenuopen ? 'rotate-180' : ''}`}
           >
             <FontAwesomeIcon icon={mbmenuopen ? faTimes : faBars} size="lg" />
           </button>
@@ -56,7 +58,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {mbmenuopen && <MobileOverlay links={navLinks} />}
+      {mbmenuopen && <MobileOverlay links={navLinks} onClose={handleMenuClose} />}
     </nav>
   );
 };

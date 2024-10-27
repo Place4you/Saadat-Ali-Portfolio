@@ -14,7 +14,7 @@ import { ToastContainer } from 'react-toastify';
 
 export default function Home() {
   return (
-    <main className=" min-h-screen   flex-col  container mx-auto px-0">
+    <main id="home" className=" min-h-screen   flex-col  container mx-auto px-0">
          <Navbar />
       <div className="container mx-auto px-12 py-4 sm:overflow-x-hidden">
 
