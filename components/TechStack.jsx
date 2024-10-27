@@ -12,8 +12,7 @@ function TechStack() {
     { src: '/images/laravel.png', name: 'Laravel' },
     { src: '/images/tailwind.png', name: 'Tailwind' },
     { src: '/images/vscode.svg', name: 'VSCode' },
-    { src: '/images/angular.png', name: 'angular' },
-    { src: '/images/github-icon.svg', name: 'GitHub' },
+    { src: '/images/angular.png', name: 'Angular' },
     { src: '/images/sass.svg', name: 'Sass' },
 
   ]

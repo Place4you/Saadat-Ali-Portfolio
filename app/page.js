@@ -1,6 +1,7 @@
 "use client"
 import AboutSection from "@/components/AboutSection"
 import AcheivementSection from "@/components/AcheivementSection"
+import BadgeLinks from "@/components/BadgeSection"
 import ContactSection from "@/components/ContactSection"
 import Footer from "@/components/Footer"
 import Hero from "@/components/Hero"
@@ -23,6 +24,7 @@ export default function Home() {
       <TechStack />
       <AboutSection id="#about" />
       <AcheivementSection />
+      <BadgeLinks />
       <ProjectSection />
       <ContactSection />
       <ToastContainer autoClose={3000} />
