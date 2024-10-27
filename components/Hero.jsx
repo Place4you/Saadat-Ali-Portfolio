@@ -47,7 +47,7 @@ const Hero = () => {
 
           <p className='text-base text-[#AEB7BE]'> I am Full stack Developer with Experience in Both Frontend & Backend, Currently working as Freelancer on Fiverr and Upwork</p>
 
-          <div className=" p-4 space-y-4 lg:space-y-0 lg:flex ">
+          <div className=" p-4  space-x-5 space-y-4 lg:space-y-0 lg:flex h-auto">
             <Link href="https://www.upwork.com/freelancers/~01b81678ded0dd054a/" passHref target="_blank">
               <button
                 className="lg:mr-3 md:mr-3 w-fit px-6 py-3 font-bold bg-gradient-to-br from-orange-400 to-yellow-400 text-black hover:text-white rounded-lg hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500"
@@ -74,8 +74,9 @@ const Hero = () => {
                 alt="hero image"
                 width={350}
                 height={350}
-                objectFit='cover'
+                style={{ objectFit: "cover" }}   
               />
+  
             </div>
           </div>
         </div>

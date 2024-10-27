@@ -160,8 +160,8 @@ const AboutSection = () => {
     alt="hero image"
     width={350}
     height={350}
-    layout="responsive"
-  />
+    style={{ objectFit: "contain" }}
+    />
   
   <div className='order-1 lg:order-2 sm:w-full'>
     <h1 className='text-4xl lg:text-6xl font-extrabold pb-3 lg:text-left sm:text-center'>👋 About me</h1>

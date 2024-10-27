@@ -45,7 +45,7 @@ const AcheivementSection = () => {
       acheivement.map((acheivement,index)=>{
         return(
           <>
-          <div key={index}
+          <div key={achievement.id || index}
           className=' w-full text-[#ADB7BE]  '>
             <div>
               <h2 className='  flex flex-row justify-center items-center'>

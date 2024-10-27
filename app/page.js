@@ -10,7 +10,7 @@ import ProjectSection from "@/components/ProjectSection"
 import TechStack from "@/components/TechStack"
 import ParticleBackground from "@/components/config/ParticleBackground"
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   return (
