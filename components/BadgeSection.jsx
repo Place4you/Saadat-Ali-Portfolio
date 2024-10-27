@@ -41,7 +41,7 @@ const BadgeLinks = () => {
                 rel="noopener noreferrer"
                 className="px-6 py-2 bg-white text-[#0072b1] rounded-full font-semibold shadow-lg hover:bg-opacity-90 transition-all"
               >
-                View Profile
+                View LinkedIn
               </a>
             </div>
           </div>
