@@ -125,7 +125,7 @@ const ProjectSection = () => {
       tag: ["ALL", "Angular"],
       imageUrl: "/images/13.jpg",
       github: "https://github.com/Place4you/NGRX-Starter-Project",
-      demoUrl: "https://sadireacttodolist.netlify.app/",
+      demoUrl: "https://sadingrxstarter.netlify.app/",
     },
     
   ];
