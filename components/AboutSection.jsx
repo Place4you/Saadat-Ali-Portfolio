@@ -1,154 +1,208 @@
-import React, { useState, useTransition } from 'react';
-import Image from 'next/image';
-import TabButton from './TabButton';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client"
+import React, { useRef, useState, useTransition } from 'react'
+import Image from 'next/image'
+import TabButton from './TabButton'
+import {  motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
-  const [ref, inView] = useInView({ triggerOnce: true });
+    const [tab, setTab] = useState("skills")
+    const [isPending, startTransition] = useTransition();
 
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+      });
+      
+    const cardVariants ={
+        initial : { opacity:0, x:100},
+        animate : { opacity: 1, x:0},
+        transititon: { duration: 2000}
+    }
+
+    const handleTabChange = (id) => {
+        startTransition(() => {
+        setTab(id);
     });
-  };
 
-  const tabContentVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-  };
 
-  const TAB_DATA = [
-    {
-      title: "Skills",
-      id: "skills",
-      content: (
-        <motion.ul
-          variants={tabContentVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-2 gap-4 text-[#ADB7BE] text-sm lg:text-lg"
-        >
-          {["HTML5", "Blade", "CSS3", "Tailwind", "JavaScript", "TypeScript", "Angular", "React", "Laravel", "PHP", "WordPress", "Shopify Store Setup"].map((skill, i) => (
-            <motion.li key={i} className="list-disc" whileHover={{ scale: 1.1 }}>
-              {skill}
-            </motion.li>
-          ))}
-        </motion.ul>
-      ),
-    },
-    {
-      title: "Education",
-      id: "education",
-      content: (
-        <motion.ul
-          variants={tabContentVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-white space-y-4"
-        >
-          <motion.li className="list-disc">
-            Bachelor's in Computer Science
-            <ul className="text-gray-400 italic ml-5">
-              <li>Mirpur University of Science & Technology</li>
-              <li>2018-22</li>
-            </ul>
-          </motion.li>
-          <motion.li className="list-disc">
-            Intermediate in Computer Science
-            <ul className="text-gray-400 italic ml-5">
-              <li>Punjab Group of Colleges</li>
-              <li>2016-18</li>
-            </ul>
-          </motion.li>
-          <motion.li className="list-disc">
-            Matric in Computer Science
-            <ul className="text-gray-400 italic ml-5">
-              <li>Public School</li>
-              <li>2014-16</li>
-            </ul>
-          </motion.li>
-        </motion.ul>
-      ),
-    },
-    {
-      title: "Certification",
-      id: "certification",
-      content: (
-        <motion.ul
-          variants={tabContentVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-white space-y-4"
-        >
-          {[
-            { title: "LARAVEL QUIZ BEGINNER LEVEL", issuer: "SkillValue Training", date: "Jun 2024" },
-            { title: "Let's Learn Laravel: A Guided Path For Beginners", issuer: "Udemy", date: "Jun 2024" },
-            { title: "Introduction to HTML5", issuer: "Coursera", date: "Jun 2020" },
-            { title: "HTML/CSS", issuer: "TestDome", date: "Jul 2023" },
-            { title: "Programming in HTML5 with JavaScript and CSS3", issuer: "HackerRank", date: "Sep 2023" },
-            { title: "Frontend Development", issuer: "Sheriyans", date: "2023" },
-          ].map((cert, i) => (
-            <motion.li key={i} className="list-disc">
-              {cert.title}
-              <ul className="text-gray-400 italic ml-5">
-                <li>{cert.issuer}</li>
-                <li>{cert.date}</li>
-              </ul>
-            </motion.li>
-          ))}
-        </motion.ul>
-      ),
-    },
-  ];
-
-  return (
-    <section id="about" className="text-white bg-black bg-opacity-80 p-8 rounded-lg shadow-lg">
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, x: -100 }}
-        animate={inView ? { opacity: 1, x: 0, transition: { duration: 1 } } : {}}
-      >
-        <div className="grid md:grid-cols-2 gap-8">
-          <Image
-            src="/images/sadi-about.jpeg"
-            alt="Saadat's portrait"
-            width={350}
-            height={350}
-            className="rounded-3xl self-center"
-            priority
-          />
-          <div className="space-y-4">
-            <h1 className="text-4xl font-extrabold">👋 About me</h1>
-            <p className="text-lg text-gray-300">
-              Hello, I'm Saadat, a <i>passionate developer</i> specializing in full-stack solutions with HTML, CSS,
-              JavaScript, PHP, Laravel, React, and more. I love merging design with technology to create web experiences
-              that stand out. Let's make something amazing together!
-            </p>
-            <div className="flex space-x-3 mt-6">
-              {TAB_DATA.map((tabItem) => (
-                <TabButton
-                  key={tabItem.id}
-                  active={tab === tabItem.id}
-                  selectTab={() => handleTabChange(tabItem.id)}
-                  className="relative hover:text-[#ecab09] text-lg"
-                >
-                  {tabItem.title}
-                </TabButton>
-              ))}
-            </div>
-            <div className="mt-6">
-              <AnimatePresence mode="wait">
-                {TAB_DATA.find((t) => t.id === tab).content}
-              </AnimatePresence>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </section>
-  );
 };
 
-export default AboutSection;
+
+    const TAB_DATA=[
+        {
+            title: "Skills",
+            id : "skills",
+            cotent : (
+                <>
+                <ul>
+                <li className=' list-disc italic '>HTML5</li>
+                <li className=' list-disc italic '>Blade</li>
+                <li className=' list-disc italic '>CSS3</li>
+                <li className=' list-disc italic '>Tailwind</li>
+                <li className=' list-disc italic '>Javascript</li>
+                <li className=' list-disc italic '>Typescript</li>
+                <li className=' list-disc italic '>Angular</li>
+                <li className=' list-disc italic '>React</li>
+                <li className=' list-disc italic '>Laravel</li>
+                <li className=' list-disc italic '>PHP</li>
+                <li className=' list-disc italic '>Wordpress</li>
+                <li className=' list-disc italic '>Shopify Store Setup</li>
+                </ul>
+                </>
+            )
+        },
+        {
+            title: "Education",
+            id : "education",
+            cotent : (
+                <>
+                <ul className="text-white">
+                    <li className=' list-disc '>
+                        Beacholars in Computer Sciences
+                        <ul className="text-gray-400 italic mb-3">
+                        <li>Mirpur University of Science & Technology</li>
+                        <li>2018-22</li>
+                        </ul>
+                    </li>
+                    <li className=' list-disc '>
+                        Intermediate in Computer Sciences
+                        <ul className="text-gray-400 italic mb-3">
+                        <li>Punjab Group Of Colleges</li>
+                        <li>2016-18</li>
+                        </ul>
+                    </li>
+                    <li className=' list-disc '>
+                        Matric in Computer Sciences
+                        <ul className="text-gray-400 italic mb-3">
+                        <li>Public School</li>
+                        <li>2014-16</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                </>
+            ) 
+        }
+        ,
+        {
+            title: "Certification",
+            id : "certification",
+            cotent : (
+                <>
+                <ul className="text-white">
+                     
+                    <li className=' list-disc '>
+                        Learn Web Design using WordPress & Start Freelancing
+                        <ul className="text-gray-400 italic mb-2">
+                        <li>Udemy</li>
+                        <li>Issued Sep 2024</li>
+                        </ul>
+                    </li>
+                   <li className=' list-disc '>
+                        Let's Learn Laravel: A Guided Path For Beginners
+                        <ul className="text-gray-400 italic mb-2">
+                        <li>Udemy</li>
+                        <li>Issued Jun 2024</li>
+                        </ul>
+                    </li>
+                    <li className=' list-disc '>
+                        Introduction to HTML5
+                        <ul className="text-gray-400 italic mb-2">
+                        <li>Coursera</li>
+                        <li>Issued Jun 2020</li>
+                        </ul>
+                    </li>
+                    <li className=' list-disc '>
+                        Freelancing Certified Professional (FGCP)
+                        <ul className="text-gray-400 italic mb-2">
+                        <li>Udemy</li>
+                        <li>Issued Oct 2024</li>
+                        </ul>
+                    </li>
+                    <li className=' list-disc '>
+                        Programming in HTML5 with JavaScript and CSS3
+                        <ul className="text-gray-400 italic mb-2">
+                        <li>HackerRank</li>
+                        <li>Issued Sep 2023</li>
+                        </ul>
+                    </li>
+                    <li className=' list-disc '>
+                        Frontend Development
+                        <ul className="text-gray-400 italic mb-2">
+                        <li>Sheriyans</li>
+                        <li>2023</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                </>
+            )
+        }
+    ]
+
+  return (
+    <>
+    <section id='about'>
+        <motion.div 
+            ref={ref}
+            variants={cardVariants}
+            initial="initial"
+            animate={inView ? "animate" : "initial"}
+        >
+        
+            
+
+        <div className='grid md:grid-cols-2 md:grid-flow-col gap-8 py-8 px-4 xl:gap-16 sm:gap-16 text-white bg-black bg-opacity-80'>
+  <Image
+    className='order-2 lg:order-1 bg-orange-500 h-auto w-full rounded-3xl place-self-center lg:place-self-start col-span-1 row-span-1 flex items-center justify-center'
+    src="/images/sadi-about.jpeg" // Ensure the path is correct
+    alt="hero image"
+    width={350}
+    height={350}
+    style={{ objectFit: "contain" }}
+    />
+  
+  <div className='order-1 lg:order-2 sm:w-full'>
+    <h1 className='text-4xl lg:text-6xl font-extrabold pb-3 lg:text-left sm:text-center'>👋 About me</h1>
+    <p className='text-lg pb-2 text-justify ml-0 pr-6'>
+      Hello, I'm Saadat, a <i>Passionate Developer</i> with a passion for crafting stunning websites. I specialize in HTML, CSS, JavaScript, PHP, Laravel & React to create visually appealing and seamlessly functioning web designs. I'm experienced in writing code for custom websites. As a team player, I enjoy collaborating on projects that merge design and technology. My goal is to create web experiences that truly stand out. I'm always excited to connect with fellow creators and collaborators, so let's make web magic happen together!
+    </p>
+
+    <div className='mt-4 flex justify-start gap-3 items-center lg:text-2xl'>
+      <TabButton 
+        className="text-white border-b border-orange-600 mr-3"
+        selectTab={() => handleTabChange("skills")} 
+        active={tab === "skills"}
+      >
+        Skills
+      </TabButton>
+      <TabButton 
+        className="text-white border-b border-orange-600 mr-3"
+        selectTab={() => handleTabChange("education")} 
+        active={tab === "education"}
+      >
+        Education
+      </TabButton>
+      <TabButton 
+        className="text-white border-b border-orange-600 mr-3"
+        selectTab={() => handleTabChange("certification")} 
+        active={tab === "certification"}
+      >
+        Certification
+      </TabButton>
+    </div>
+    
+    <div className='mt-3 ml-5'>
+      {TAB_DATA.find((t) => t.id === tab).cotent}
+    </div>
+  </div>
+</div>
+
+        </motion.div>
+    </section>
+    </>
+  )
+}
+
+export default AboutSection
