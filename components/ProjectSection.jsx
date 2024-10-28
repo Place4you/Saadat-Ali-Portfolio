@@ -21,6 +21,8 @@ const ProjectSection = () => {
   const [animationRanForHTMLCSS, setAnimationRanForHTMLCSS] = useState(false);
   const [animationRanForReact, setAnimationRanForReact] = useState(false);
   const [animationRanForPHP, setAnimationRanForPHP] = useState(false);
+  const [animationRanForAngular, setanimationRanForAngular] = useState(false);
+
 
   const handleTagChange = (newTag) => {
     switch (newTag) {
@@ -146,8 +148,9 @@ const ProjectSection = () => {
             <ProjectTag onClick={handleTagChange} name="ALL" isSelected={tag === "ALL"} />
             <ProjectTag onClick={handleTagChange} name="HTML/CSS" isSelected={tag === "HTML/CSS"} />
             <ProjectTag onClick={handleTagChange} name="React" isSelected={tag === "React"} />
-            <ProjectTag onClick={handleTagChange} name="PHP" isSelected={tag === "Angular"} />
+            <ProjectTag onClick={handleTagChange} name="Angular" isSelected={tag === "Angular"} />
             <ProjectTag onClick={handleTagChange} name="PHP" isSelected={tag === "PHP"} />
+
           </div>
 
           <ul className="mb-5 grid md:grid-cols-3 text-white gap-5 lg:gap-10">
@@ -184,6 +187,9 @@ const ProjectSection = () => {
         return animationRanForHTMLCSS ? 'animate' : 'initial';
       case 'React':
         return animationRanForReact ? 'animate' : 'initial';
+        case 'Angular':
+          return animationRanForAngular ? 'animate' : 'initial';
+        
       default:
         return 'initial';
     }
