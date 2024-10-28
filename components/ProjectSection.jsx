@@ -118,6 +118,16 @@ const ProjectSection = () => {
       github: "https://github.com/Place4you/todo-list-using-React",
       demoUrl: "https://sadireacttodolist.netlify.app/",
     },
+    {
+      id: "12",
+      title: "Bucket App(NGRX) Webapp",
+      description: "Developed using Angular(NGRX)",
+      tag: ["ALL", "Angular"],
+      imageUrl: "/images/13.jpg",
+      github: "https://github.com/Place4you/NGRX-Starter-Project",
+      demoUrl: "https://sadireacttodolist.netlify.app/",
+    },
+    
   ];
 
   const filteredProjects = Project_Data.filter((project) => project.tag.includes(tag));
