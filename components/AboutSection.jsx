@@ -35,20 +35,30 @@ const AboutSection = () => {
             id : "skills",
             cotent : (
                 <>
-                <ul>
-                <li className=' list-disc italic '>HTML5</li>
-                <li className=' list-disc italic '>Blade</li>
-                <li className=' list-disc italic '>CSS3</li>
-                <li className=' list-disc italic '>Tailwind</li>
-                <li className=' list-disc italic '>Javascript</li>
-                <li className=' list-disc italic '>Typescript</li>
-                <li className=' list-disc italic '>Angular</li>
-                <li className=' list-disc italic '>React</li>
-                <li className=' list-disc italic '>Laravel</li>
-                <li className=' list-disc italic '>PHP</li>
-                <li className=' list-disc italic '>Wordpress</li>
-                <li className=' list-disc italic '>Shopify Store Setup</li>
-                </ul>
+<div className="w-full flex flex-col md:flex-row gap-4">
+  <div className="flex-1">
+    <ul className="space-y-2">
+      <li className="list-disc italic">HTML5</li>
+      <li className="list-disc italic">Blade</li>
+      <li className="list-disc italic">CSS3</li>
+      <li className="list-disc italic">Tailwind</li>
+      <li className="list-disc italic">JavaScript</li>
+      <li className="list-disc italic">TypeScript</li>
+    </ul>
+  </div>
+  <div className="flex-1">
+    <ul className="space-y-2">
+      <li className="list-disc italic">Angular</li>
+      <li className="list-disc italic">React</li>
+      <li className="list-disc italic">Laravel</li>
+      <li className="list-disc italic">PHP</li>
+      <li className="list-disc italic">WordPress</li>
+      <li className="list-disc italic">Shopify Store Setup</li>
+    </ul>
+  </div>
+</div>
+
+
                 </>
             )
         },
