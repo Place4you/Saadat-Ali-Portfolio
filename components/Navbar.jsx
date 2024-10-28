@@ -2,8 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 import Navlink from './Navlink';
 import MobileOverlay from './MobileOverlay';
 
@@ -36,16 +35,25 @@ const Navbar = () => {
         isSticky ? stickyNavbarStyle : normalNavbarStyle
       }`}
     >
-      <div className="flex items-center justify-between mx-auto px-4 py-3 md:py-4">
-        <Link href="/" className="text-white text-3xl font-bold z-50">Sadi</Link>
+      <div className="flex items-center  justify-between mx-auto  px-4 py-3 md:py-4">
+        <Link href="/" className="text-white text-3xl lg:text-4xl font-bold z-50">Sadi</Link>
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden z-50">
           <button
             onClick={toggleMenu}
-            className={`text-[#ECAB09] border border-r-2 border-[#ECAB09] p-1 rounded-md transition-transform duration-300 transform hover:scale-110 ${mbmenuopen ? 'rotate-180' : ''}`}
+            className={`p-1 rounded-md transition-transform duration-300 transform ${
+              mbmenuopen ? 'rotate-180' : 'rotate-0'
+            }`}
           >
-            <FontAwesomeIcon icon={mbmenuopen ? faTimes : faBars} size="lg" />
+            <Image
+              src={mbmenuopen ? "/images/close.svg" : "/images/hamburger.svg"}
+              alt="Menu Icon"
+              width={32} // Slightly larger
+              height={32}
+              className="text-[#ECAB09]" // Applying yellow color styling
+              style={{ filter: 'invert(66%) sepia(76%) saturate(652%) hue-rotate(356deg) brightness(102%) contrast(102%)' }}
+            />
           </button>
         </div>
 
@@ -58,7 +66,13 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {mbmenuopen && <MobileOverlay links={navLinks} onClose={handleMenuClose} />}
+      {mbmenuopen && (
+        <MobileOverlay
+          links={navLinks}
+          onClose={handleMenuClose}
+          className="bg-white text-black"
+        />
+      )}
     </nav>
   );
 };

@@ -18,7 +18,7 @@ function TechStack() {
   ]
 
   const techStack = [
-    { src: '/images/php.png', name: 'Php' },
+    { src: '/images/angular.png', name: 'Angular' },
     { src: '/images/laravel.png', name: 'Laravel' },
     { src: '/images/react.svg', name: 'React' },
     { src: '/images/node.svg', name: 'Node' },
@@ -42,8 +42,7 @@ function TechStack() {
         Web Technologies
       </h1>
       <p className="font-mono">
-        As a FullStack developer, I am well-versed in a variety of web technologies that enable me to create stunning and interactive web experiences. From the foundational building blocks like HTML5 and CSS3 to the dynamic capabilities of JavaScript and React, I harness these technologies to craft user-friendly and visually appealing websites. With expertise in tools like VSCode, GitHub, and Tailwind CSS, I ensure that my web projects are not only aesthetically pleasing but also efficient and easy to maintain. For the Backend, i have experience in Laravel to handle Database, Api etc. My proficiency in these technologies empowers me to bring your web design visions to life, blending creativity with functionality.
-      </p>
+As a FullStack developer, I am well-versed in a variety of web technologies, allowing me to create engaging, high-performing web experiences. I leverage core technologies like HTML5, CSS3, JavaScript, Angular, and TypeScript, while specializing in frameworks like React to build responsive and visually compelling websites. Additionally, with skills in WordPress and Laravel, I can manage both frontend and backend development seamlessly. My toolset includes VSCode, GitHub, and Tailwind CSS, which help ensure that each project is efficient, maintainable, and visually appealing. My Laravel experience extends to database management and API integration, rounding out a full suite of capabilities to bring your web projects to life with creativity and precision.      </p>
     </div>
     <div className="pt-24 w-full lg:w-1/2">
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 justify-items-center">
