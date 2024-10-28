@@ -124,6 +124,15 @@ const ProjectSection = () => {
       github: "https://github.com/Place4you/Creative-Golf-Landing-page",
       demoUrl: "https://creativegolflanding.netlify.app/",
     },
+    {
+      id: "9",
+      title: "Angular Landing Page",
+      description: "Developed using Angular18+Typescript",
+      tag: ["ALL", "Angular"],
+      imageUrl: "/images/10.jpg",
+      github: "https://github.com/Place4you/AngularLandingPage",
+      demoUrl: "https://angularlanding.netlify.app/",
+    },
   ];
 
   const filteredProject = Project_Data.filter((project) => project.tag.includes(tag));
@@ -137,6 +146,7 @@ const ProjectSection = () => {
             <ProjectTag onClick={handleTagChange} name="ALL" isSelected={tag === "ALL"} />
             <ProjectTag onClick={handleTagChange} name="HTML/CSS" isSelected={tag === "HTML/CSS"} />
             <ProjectTag onClick={handleTagChange} name="React" isSelected={tag === "React"} />
+            <ProjectTag onClick={handleTagChange} name="PHP" isSelected={tag === "Angular"} />
             <ProjectTag onClick={handleTagChange} name="PHP" isSelected={tag === "PHP"} />
           </div>
 

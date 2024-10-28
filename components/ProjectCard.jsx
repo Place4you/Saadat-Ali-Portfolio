@@ -15,7 +15,7 @@ const ProjectCard = ({ title, description, imageUrl, github, demoUrl }) => {
             src={imageUrl}
             alt={title}
             layout="fill"
-            objectFit="cover"
+            style={{ objectFit: "contain" }}
             className="rounded-t-lg"
             priority
           />
