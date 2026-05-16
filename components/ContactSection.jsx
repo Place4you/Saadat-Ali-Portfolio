@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 const ContactSection = () => {
   // Using the ngrok forwarding URL from image_b1ee79.png 
   // and the webhook path from image_b1eef6.jpg
-  const WEBHOOK_URL = 'https://refueling-reshape-bonus.ngrok-free.dev/webhook-test/1ff4200a-a0ac-45d9-91d0-1fcf38d02b0b';
+  const WEBHOOK_URL = 'https://refueling-reshape-bonus.ngrok-free.dev/webhook/1ff4200a-a0ac-45d9-91d0-1fcf38d02b0b';
 
   const sendToWorkflow = async (e) => {
     e.preventDefault();
